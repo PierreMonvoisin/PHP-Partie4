@@ -1,4 +1,18 @@
-<?php // Déclaration de variable ?>
+<?php
+$message = ''; $param1; $param2;
+function returnNumber($param1, $param2){
+  if ($param1 > $param2){
+    $message = 'Le premier nombre est plus grand';
+  } else if ($param1 < $param2){
+    $message = 'Le premier nombre est plus petit';
+  } else {
+    $message = 'Les deux nombres sont identiques';
+  }
+  return $message;
+}
+$firstNumber = 21; $secondNumber = 21;
+$message = returnNumber($firstNumber, $secondNumber);
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -12,11 +26,7 @@
 
   <div class="row mt-5">
     <div class="jumbotron shadow-lg mx-auto text-center">
-      <p>
-        <?php
-        // Code à executer
-        ?>
-      </p>
+      <p><?= $message ?></p>
       <div class="text-right mt-1">Un message de la direction</div>
     </div>
   </div>

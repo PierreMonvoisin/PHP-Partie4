@@ -1,4 +1,12 @@
-<?php // Déclaration de variable ?>
+<?php
+$message = ''; $var;
+function returnString($var){
+  $message = $var;
+  return $message;
+}
+$string = 'Bonjour';
+$message = returnString($string);
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -12,11 +20,7 @@
 
   <div class="row mt-5">
     <div class="jumbotron shadow-lg mx-auto text-center">
-      <p>
-        <?php
-        // Code à executer
-        ?>
-      </p>
+      <p><?= 'String = ' .$message ?></p>
       <div class="text-right mt-1">Un message de la direction</div>
     </div>
   </div>

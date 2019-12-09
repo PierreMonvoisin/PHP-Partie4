@@ -1,4 +1,12 @@
-<?php // Déclaration de variable ?>
+<?php
+$message = ''; $firstVar; $secondVar;
+function returnConcat($firstVar, $secondVar){
+  $message = ($firstVar.$secondVar);
+  return $message;
+}
+$firstString = 'Bonjour '; $firstNumber = 13;
+$message = returnConcat($firstString, $firstNumber);
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -12,12 +20,8 @@
 
   <div class="row mt-5">
     <div class="jumbotron shadow-lg mx-auto text-center">
-      <p>
-        <?php
-        // Code à executer
-        ?>
-      </p>
-      <div class="text-right mt-1">Un message de la direction</div>
+      <p><?= $message. ', your mission, sould you accept it, is to explode everything.' ?></p>
+      <div class="text-right mt-1">Un message de Q</div>
     </div>
   </div>
 

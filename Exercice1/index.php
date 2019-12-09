@@ -1,4 +1,11 @@
-<?php // Déclaration de variable ?>
+<?php
+$message = '';
+function returnTrue(){
+  $message = 'true';
+  return $message;
+}
+$message = returnTrue();
+?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -12,11 +19,7 @@
 
   <div class="row mt-5">
     <div class="jumbotron shadow-lg mx-auto text-center">
-      <p>
-        <?php
-        // Code à executer
-        ?>
-      </p>
+      <p><?= $message ?></p>
       <div class="text-right mt-1">Un message de la direction</div>
     </div>
   </div>
