@@ -1,11 +1,10 @@
 <?php
 $message = ''; $firstVar; $secondVar;
 function returnString($firstVar, $secondVar){
-  $message = ($firstVar.$secondVar);
+  $message = $firstVar.$secondVar;
   return $message;
 }
-$firstString = 'Bonjour'; $secondString = ' tout le monde !';
-$message = returnString($firstString, $secondString);
+$message = returnString('Bonjour', ' tout le monde !');
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
